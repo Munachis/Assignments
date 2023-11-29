@@ -32,10 +32,37 @@ public class Person
 }
 public class Mainsy
 {
-    public static void Main(string[] args)
+    //public static void Main(string[] args)
+    //{
+    //    Name na = new Name("Ofiligo", "Munachiso", "Momife");
+    //    Person person = new Person(1, na, 17);
+    //    person.display();
+    //}
+}
+internal class Substring
+{
+    static void Main(string[] args)
     {
-        Name na = new Name("Ofiligo", "Munachiso", "Momife");
-        Person person = new Person(1, na, 17);
-        person.display();
+        Muna();
     }
+    static void Muna()
+    {
+        Console.WriteLine("Enter the String and substring respectively");
+        string Name = Console.ReadLine();
+        string[] NameArr = Name.Split(' ');
+        string substring = Console.ReadLine();
+        int substringCount = 0;
+
+        for (int i = 0; i < NameArr.Length; i++)
+        {
+            if (NameArr[i].Equals(substring))
+            {
+                substringCount++;
+            }
+        }
+        Console.WriteLine($"The number is {substringCount}");
+
+    }
+
+
 }
